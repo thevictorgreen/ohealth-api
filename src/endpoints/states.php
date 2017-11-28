@@ -18,7 +18,7 @@
 
     $results = $db->query("Select * from states");
 
-    echo json_encode($results);
+    echo json_encode( $results->fetchAll(PDO::FETCH_ASSOC)) ;
 
     exit;
   }
