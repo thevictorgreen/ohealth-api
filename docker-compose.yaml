@@ -17,7 +17,7 @@ services:
     volumes:
       - ./src:/var/www/html
     environment:
-      - DB_HOST=db-service
+      - DB_HOST=api-db-service
       - DB_NAME=FIRSTMEDISOURCE
       - DB_USER=root
       - DB_PASS=g0th@m
