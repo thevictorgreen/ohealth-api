@@ -7,6 +7,7 @@
   function states( Request $request, Response $response ) {
 
     header("Content-Type: application/json");
+    header("Access-Control-Allow-Origin: *");
 
     // DATABASE CONNECTION CODE
     $db_host = getenv('DB_HOST');
