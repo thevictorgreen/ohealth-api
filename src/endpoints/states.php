@@ -15,7 +15,7 @@
 
   //  $results = $db->query("Select * from states");
 
-    $response->getBody()->write( $db_host );
+    $response->getBody()->write( 'boss' );
 
     return $response;
   }
