@@ -15,7 +15,7 @@
 
     $results = $db->query("Select * from states");
 
-    $response->getBody()->write( $results );
+    $response->getBody()->write( $results->rowCount() );
 
     return $response;
   }
