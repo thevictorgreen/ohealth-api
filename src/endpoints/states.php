@@ -13,9 +13,11 @@
 
   function states( Request $request, Response $response ) {
 
+    $db_host = getenv('DB_HOST');
+
   //  $results = $db->query("Select * from states");
 
-    $response->getBody()->write( 'boss' );
+    $response->getBody()->write( $db_host );
 
     return $response;
   }
