@@ -21,7 +21,7 @@
     $data = array('name' => 'Bob', 'age' => 40);
     $response->withJson($data);
 
-    //return $response;
+    return $response;
   }
 
 ?>
