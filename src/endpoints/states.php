@@ -6,6 +6,8 @@
 
   function states( Request $request, Response $response ) {
 
+    $response->withHeader('Content-type', 'application/json');
+
     // DATABASE CONNECTION CODE
     $db_host = getenv('DB_HOST');
     $db_name = getenv('DB_NAME');
@@ -16,9 +18,10 @@
 
     $results = $db->query("Select * from states");
 
-    $response->getBody()->write( $results );
+    $data = array('name' => 'Bob', 'age' => 40);
+    $response->withJson($data);
 
-    return $response;
+    //return $response;
   }
 
 ?>
