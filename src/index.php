@@ -5,6 +5,7 @@
 
   // DECLARE ENDPOINTS HERE
   require './endpoints/replay.php';
+  require './endpoints/states.php';
 
   // IMPORT
   require './vendor/autoload.php';
@@ -14,6 +15,7 @@
 
   // CONNECT ROUTES TO ENDPOINTS
   $app->get('/hello/{name}', replay);
+  $app->get('/states', states);
 
   // RUN APPLICATION
   $app->run();
