@@ -4,14 +4,24 @@
 version: '3'
 
 services:
+  api-db-service:
+    image: vdigital/mysql:5.6
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=g0th@m
+      - MYSQL_DATABASE=FIRSTMEDISOURCE
+
   api-service:
     image: vdigital/phpmicro:dev
     volumes:
       - ./src:/var/www/html
     environment:
       - DB_HOST=db-service
-      - DB_NAME=OPENHEALTH
+      - DB_NAME=FIRSTMEDISOURCE
       - DB_USER=root
       - DB_PASS=g0th@m
     ports:
       - 32000:80
+    depends_on:
+      - api-db-service
