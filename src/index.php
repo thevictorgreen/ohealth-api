@@ -19,7 +19,7 @@
   $app->get('/hello/{name}', replay);
   $app->get('/states', states);
   $app->get('/insurance/{st_id}', insurance);
-  $app->get('/cities/{st_id}', insurance);
+  $app->get('/cities/{st_id}', cities);
 
 
   // RUN APPLICATION
