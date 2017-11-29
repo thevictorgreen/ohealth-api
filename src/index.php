@@ -7,6 +7,7 @@
   require './endpoints/replay.php';
   require './endpoints/states.php';
   require './endpoints/insurance.php';
+  require './endpoints/cities.php';
 
   // IMPORT
   require './vendor/autoload.php';
@@ -18,6 +19,7 @@
   $app->get('/hello/{name}', replay);
   $app->get('/states', states);
   $app->get('/insurance/{st_id}', insurance);
+  $app->get('/cities/{st_id}', insurance);
 
 
   // RUN APPLICATION
