@@ -17,7 +17,9 @@
     $db = new PDO('mysql:host=' . $db_host . ';dbname=' . $db_name . ';charset=utf8mb4',$db_user,$db_pass);
     // DATABASE CONNECTION CODE
 
-    $results = $db->query("Select * from states");
+    $st_id = $request->getAttribute('st_id');
+    $results = $db->query("Select * from insurance where st_id = " . $st_id);
+
     echo json_encode( $results->fetchAll(PDO::FETCH_ASSOC)) ;
 
     exit;
