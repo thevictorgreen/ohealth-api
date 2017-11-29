@@ -4,7 +4,7 @@
   use \Psr\Http\Message\ResponseInterface as Response;
 
 
-  function states( Request $request, Response $response ) {
+  function insurance( Request $request, Response $response ) {
 
     header("Content-Type: application/json");
     header("Access-Control-Allow-Origin: *");
